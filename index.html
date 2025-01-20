@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Parser</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Parser</h1>
+        
+        <div class="upload-section">
+            <input type="file" id="resumeInput" accept=".pdf,.doc,.docx" style="display: none;">
+            <button class="upload-button" onclick="document.getElementById('resumeInput').click()">
+                Upload Resume
+            </button>
+            <p style="margin-top: 10px; color: #666;">
+                Supported formats: PDF, DOC, DOCX
+            </p>
+        </div>
+
+        <div class="loading">
+            <div class="loading-spinner"></div>
+            <p>Processing your resume...</p>
+        </div>
+
+        <div class="results-grid">
+            <div class="result-section" id="result">
+                <h2>Parsed Content</h2>
+                <div id="parsedContent">
+                    <!-- Parsed content will be inserted here -->
+                </div>
+            </div>
+
+            <div class="result-section" id="extractedData">
+                <h2>Key Information</h2>
+                <div id="keyInfo">
+                    <!-- Extracted data will be inserted here -->
+                </div>
+            </div>
+
+            <div class="result-section" id="suggestions">
+                <h2>Improvement Suggestions</h2>
+                <div id="improvementSuggestions">
+                    <!-- Suggestions will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
