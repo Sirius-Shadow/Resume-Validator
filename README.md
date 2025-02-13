@@ -178,9 +178,3 @@ A: Yes, all processing is done client-side using browser-based technologies. No 
 
 **Q: Can I use this tool offline?**
 A: Yes, once loaded, the application can function offline as all processing is done locally.
-
-## Contact
-
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - email@example.com
-
-Project Link: [https://github.com/yourusername/smart-resume-validator](https://github.com/yourusername/smart-resume-validator)
