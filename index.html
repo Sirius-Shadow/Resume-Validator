@@ -3,52 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume Parser</title>
+    <title>Smart Resume Validator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Resume Parser</h1>
+        <h1>Smart Resume Validator</h1>
         
         <div class="upload-section">
-            <input type="file" id="resumeInput" accept=".pdf,.doc,.docx" style="display: none;">
+            <input type="file" id="resumeInput" accept=".pdf,.doc,.docx,.txt" style="display: none;">
             <button class="upload-button" onclick="document.getElementById('resumeInput').click()">
                 Upload Resume
             </button>
-            <p style="margin-top: 10px; color: #666;">
-                Supported formats: PDF, DOC, DOCX
+            <p class="supported-formats">
+                Supported formats: PDF, DOC, DOCX, TXT
             </p>
         </div>
 
-        <div class="loading">
+        <div id="loading" class="loading" style="display: none;">
             <div class="loading-spinner"></div>
-            <p>Processing your resume...</p>
+            <p>Analyzing your resume with AI...</p>
         </div>
 
-        <div class="results-grid">
-            <div class="result-section" id="result">
-                <h2>Parsed Content</h2>
-                <div id="parsedContent">
-                    <!-- Parsed content will be inserted here -->
+        <div class="results-container" style="display: none;">
+            <div class="score-section">
+                <div class="score-circle">
+                    <span id="resumeScore">0</span>
                 </div>
+                <h3>Resume Score</h3>
             </div>
 
-            <div class="result-section" id="extractedData">
-                <h2>Key Information</h2>
-                <div id="keyInfo">
-                    <!-- Extracted data will be inserted here -->
+            <div class="results-grid">
+                <div class="result-section">
+                    <h2>Key Information</h2>
+                    <div id="keyInfo" class="content-box"></div>
                 </div>
-            </div>
 
-            <div class="result-section" id="suggestions">
-                <h2>Improvement Suggestions</h2>
-                <div id="improvementSuggestions">
-                    <!-- Suggestions will be inserted here -->
+                <div class="result-section">
+                    <h2>Skills Analysis</h2>
+                    <div id="skillsAnalysis" class="content-box"></div>
+                </div>
+
+                <div class="result-section">
+                    <h2>Experience Insights</h2>
+                    <div id="experienceInsights" class="content-box"></div>
+                </div>
+
+                <div class="result-section full-width">
+                    <h2>AI-Powered Suggestions</h2>
+                    <div id="aiSuggestions" class="content-box"></div>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
